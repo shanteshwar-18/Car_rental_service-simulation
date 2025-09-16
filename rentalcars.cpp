@@ -7,9 +7,7 @@
 
 using namespace std;
 
-//==================================================================
 // User Class Declaration and Implementation
-//==================================================================
 class User {
 private:
     string userId;
@@ -30,9 +28,8 @@ public:
     }
 };
 
-//==================================================================
 // Base Car Class (Abstract)
-//==================================================================
+
 class Car {
 private:
     string carId;
@@ -72,9 +69,7 @@ public:
     virtual string getCarType() const = 0;
 };
 
-//==================================================================
 // Economy Car Class (Derived)
-//==================================================================
 class EconomyCar : public Car {
 public:
     // Constructor calling base class constructor
@@ -98,9 +93,8 @@ public:
     }
 };
 
-//==================================================================
 // Luxury Car Class (Derived)
-//==================================================================
+
 class LuxuryCar : public Car {
 public:
     // Constructor calling base class constructor
@@ -124,9 +118,7 @@ public:
     }
 };
 
-//==================================================================
 // Rental Class Declaration and Implementation
-//==================================================================
 class Rental {
 private:
     string rentalId;
@@ -190,9 +182,7 @@ public:
     }
 };
 
-//==================================================================
 // Car Rental Management System Class
-//==================================================================
 class CarRentalSystem {
 private:
     vector<User> users;
@@ -520,9 +510,7 @@ public:
     }
 };
 
-//==================================================================
 // Main Function
-//==================================================================
 int main() {
     try {
         CarRentalSystem system;
@@ -538,16 +526,3 @@ int main() {
     return 0;
 }
 
-/********************************************************************
- * Compilation Instructions:
- * 
- * g++ -std=c++17 -Wall -Wextra -O2 -o car_rental main.cpp
- * 
- * Or with more detailed warnings:
- * g++ -std=c++17 -Wall -Wextra -Wpedantic -O2 -o car_rental main.cpp
- * 
- * Run with: ./car_rental
- * 
- * Note: Using "using namespace std;" directive is included to avoid
- * writing std:: prefix for standard library components.
- ********************************************************************/
